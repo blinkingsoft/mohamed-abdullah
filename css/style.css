@@ -156,6 +156,10 @@ footer ul li {
     font-weight: normal;
 }
 
+.fw-900 {
+    font-weight: 900;
+}
+
 .w-16 {
     width: 16rem;
 }
@@ -362,6 +366,51 @@ footer ul li {
 
 .full-width {
     width: 100%;
+}
+
+.flip-card {
+    perspective: 1000px;
+    width: 350px;
+    height: 300px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+    background-color: #f9f9f9;
+}
+
+.flip-card-back {
+    background-color: #e0e0e0;
+    transform: rotateY(180deg);
+}
+
+.flip-img {
+    width: 400px;
+    height: 450px;
 }
 
 @media only screen and (max-width: 900px) {

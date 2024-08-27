@@ -139,40 +139,66 @@
                 <div class="d-grid df-center f-24" id="home-headings">
                     <h1>What will you get from this <span class="highlight-text">Program</span>?</h1>
                 </div>
-                <div class="d-grid dg-1-1-1 gap-2 mt-2 program-content">
-                    <div class="text-center program-images mt-1 content">
-                        <div class="relative full-width">
-                            <div class="absolute full-width text-white mt-10 f-20">
-                                Core Strengthening
+                <div class="d-grid dg-1-1-1 gap-2 mt-10">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="relative full-width">
+                                    <div class="absolute full-width text-white text-center fw-900 pt-5 mt-10 f-20">
+                                        Core Strengthening
+                                    </div>
+                                </div>
+                                <img src="img/program/program-1.png" class="flip-img full-width"
+                                    alt="Core Strengthening">
+                            </div>
+
+                            <div class="flip-card-back text-center">
+                                <p>Details about Core Strengthening...</p>
                             </div>
                         </div>
-                        <img src="img/program/program-1.png" class="full-width" alt="Core Strengthening">
                     </div>
-                    <div class="text-center program-images mt-1 content">
-                        <div class="relative full-width">
-                            <div class="absolute full-width text-white mt-10 f-20">
-                                Cross Fit
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="relative full-width">
+                                    <div class="absolute full-width text-white text-center fw-900 pt-5 mt-10 f-20">
+                                        Cross Fit
+                                    </div>
+                                </div>
+                                <img src="img/program/program-2.png" class="flip-img full-width"
+                                    alt="Core Strengthening">
+                            </div>
+
+                            <div class="flip-card-back text-center">
+                                <p>Details about Core Strengthening...</p>
                             </div>
                         </div>
-                        <img src="img/program/program-2.png" class="full-width" alt="Cross Fit">
                     </div>
-                    <div class="text-center program-images mt-1 content">
-                        <div class="relative full-width">
-                            <div class="absolute full-width text-white mt-10 f-20">
-                                Contest Preparation
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="relative full-width">
+                                    <div class="absolute full-width text-white text-center fw-900 pt-5 mt-10 f-20">
+                                        Contest Preparation
+                                    </div>
+                                </div>
+                                <img src="img/program/program-3.png" class="flip-img full-width"
+                                    alt="Contest Preparation">
+                            </div>
+
+                            <div class="flip-card-back text-center">
+                                <p>Details about Core Strengthening...</p>
                             </div>
                         </div>
-                        <img src="img/program/program-1.png" class="full-width" alt="Contest Preparation">
                     </div>
                 </div>
-                <div class="d-flex df-center mt-2" id="mobile-button">
+                <div class="d-flex df-center mt-10" id="mobile-button">
                     <button class="btn btn-action">
                         <a href="program.html" style="color: #fff; text-decoration: none;">
                             Explore All Programs
                         </a>
                     </button>
                 </div>
-            </div>
         </section>
 
         <section id="progress-section">
@@ -664,6 +690,12 @@
         if (currentTheme) {
             document.documentElement.setAttribute('data-theme', currentTheme);
         }  
+    </script>
+    <script>
+        const flipCard = document.querySelector('.flip-card');
+        flipCard.addEventListener('click', () => {
+            flipCard.classList.toggle('flipped');
+        });
     </script>
 </body>
 
