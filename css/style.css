@@ -116,6 +116,14 @@ footer ul li {
     gap: 1rem;
 }
 
+.gap-2 {
+    gap: 2rem;
+}
+
+.gap-3 {
+    gap: 3rem;
+}
+
 .f-12 {
     font-size: 12px;
 }
@@ -154,6 +162,10 @@ footer ul li {
 
 .fw-normal {
     font-weight: normal;
+}
+
+.fw-700 {
+    font-weight: 700;
 }
 
 .fw-900 {
@@ -387,31 +399,53 @@ footer ul li {
 
 .flip-card-front,
 .flip-card-back {
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    height: 300px;
     position: absolute;
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.flip-card-front {
-    background-color: #f9f9f9;
 }
 
 .flip-card-back {
     background-color: #e0e0e0;
     transform: rotateY(180deg);
+    padding: 0.5rem;
 }
 
-.flip-img {
-    width: 400px;
-    height: 450px;
+.review-img-cover {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
 }
+
+.testimonial-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-content {
+    position: absolute;
+    margin-top: 30rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    width: 90%;
+}
+
+.rating-container {
+    margin-bottom: 10px;
+}
+
+
 
 @media only screen and (max-width: 900px) {
 
