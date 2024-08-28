@@ -21,27 +21,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dark-mode.css">
     <title>Mohamed Abdullah | Ex-veteran | Mr Universe | Yours friendly Fitness Trainer</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".faq-answer").hide();
-
-            $(".arrow").click(function () {
-                var faqAnswer = $(this).parent().siblings(".faq-answer");
-                $(".faq-answer").not(faqAnswer).hide(500);
-                $(".arrow").not(this).removeClass("up");
-
-                if (faqAnswer.is(":visible")) {
-                    faqAnswer.hide(500);
-                    $(this).removeClass("up");
-                } else {
-                    $(this).addClass("up");
-                    faqAnswer.show(500);
-                }
-            });
-        });
-
-    </script>
 </head>
 
 <body>
@@ -538,7 +517,7 @@
                                 <i class="ri-star-fill rating"></i>
                                 <i class="ri-star-fill rating"></i>
                                 <i class="ri-star-fill rating"></i>
-                                <i class="ri-star-half-line rating"></i>
+                                <i class="ri-star-fill rating"></i>
                             </div>
                             <h4>Praveen Kumar</h4>
                             <div class="mt-1">
@@ -559,7 +538,7 @@
                                 <i class="ri-star-fill rating"></i>
                                 <i class="ri-star-fill rating"></i>
                                 <i class="ri-star-fill rating"></i>
-                                <i class="ri-star-line rating"></i>
+                                <i class="ri-star-half-line rating"></i>
                             </div>
                             <h4>Joe</h4>
                             <div class="mt-1">
@@ -578,7 +557,7 @@
                                 <i class="ri-star-fill rating"></i>
                                 <i class="ri-star-fill rating"></i>
                                 <i class="ri-star-fill rating"></i>
-                                <i class="ri-star-fill rating"></i>
+                                <i class="ri-star-line rating"></i>
                             </div>
                             <h4>Chandler</h4>
                             <div class="mt-1">
@@ -599,9 +578,47 @@
                         <i class="ri-whatsapp-fill"></i>
                         Contact Mohammed Abdullah
                     </button>
-                    <button class="btn btn-action" data-aos="fade-down" data-aos-duration="2000">
-                        Enroll for a free trail Session
-                    </button>
+                    <button class="btn btn-action" data-aos="fade-down" data-aos-duration="1000"
+                        id="openEnrollSessionButton">Enroll for a Free Trial
+                        Session</button>
+                    <div id="EnrollSessionModal" class="modal">
+                        <div class="modal-content">
+                            <h2>Free Trial Session</h2>
+                            <form action="/submit_offline" method="post">
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="schedule">Preferred Schedule:</label>
+                                    <input type="text" id="schedule" name="schedule"
+                                        placeholder="e.g., Mon to Sat, 5 am to 9 pm" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="training_type">Training Type:</label>
+                                    <select id="training_type" name="training_type" required>
+                                        <option value="weight_training">Weight Training</option>
+                                        <option value="stretching">Stretching</option>
+                                        <option value="counseling">Counseling</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="trial">Free Trial:</label>
+                                    <input type="checkbox" id="trial" name="trial">
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                            <button class="close-modal" id="closeEnrollModalButton">&times;</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -808,6 +825,7 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         AOS.init();
     </script>
@@ -885,6 +903,9 @@
         document.getElementById('openJoinModalButton').onclick = function () {
             openModal('joinMemberModal');
         };
+        document.getElementById('openEnrollSessionButton').onclick = function () {
+            openModal('EnrollSessionModal');
+        };
         document.getElementById('closeOnlineModalButton').onclick = function () {
             closeModal('onlineTrainingModal');
         };
@@ -894,6 +915,9 @@
         document.getElementById('closeJoinModalButton').onclick = function () {
             closeModal('joinMemberModal');
         };
+        document.getElementById('closeEnrollModalButton').onclick = function () {
+            closeModal('EnrollSessionModal');
+        };
         window.onclick = function (event) {
             const modals = document.querySelectorAll('.modal');
             modals.forEach(modal => {
@@ -902,6 +926,26 @@
                 }
             });
         };
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".faq-answer").hide();
+
+            $(".arrow").click(function () {
+                var faqAnswer = $(this).parent().siblings(".faq-answer");
+                $(".faq-answer").not(faqAnswer).hide(500);
+                $(".arrow").not(this).removeClass("up");
+
+                if (faqAnswer.is(":visible")) {
+                    faqAnswer.hide(500);
+                    $(this).removeClass("up");
+                } else {
+                    $(this).addClass("up");
+                    faqAnswer.show(500);
+                }
+            });
+        });
+
     </script>
 </body>
 
