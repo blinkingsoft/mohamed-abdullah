@@ -55,8 +55,8 @@
                 </div>
             </div>
             <div>
-                <div class="mobile-menu d-flex df-around gap-0 align-center">
-                    <ul class="d-flex df-between gap-6 pb-2 p-2 mobile-hide" id="header-nav">
+                <div class="mobile-menu d-flex df-around gap-0">
+                    <ul class="d-flex df-between gap-6 mobile-hide align-center" id="header-nav">
                         <li>
                             <a href="index.html">Home</a>
                         </li>
@@ -206,7 +206,6 @@
                     </button>
                 </div>
         </section>
-
         <section id="progress-section">
             <div class="plan-container plan-card mx-2 mt-3">
                 <div class="d-grid dg-1-2">
@@ -217,10 +216,129 @@
                         <div class="d-grid dg-2-1">
                             <div class="d-flex mobile-block df-between">
                                 <h3>WEIGHT GAIN<br>[ 3 session / week ]</h3>
-                                <button class="btn btn-action m-1">Online training</button>
+                                <button class="btn btn-action m-1" id="openOnlineModalButton">Online training</button>
+                                <div id="onlineTrainingModal" class="modal">
+                                    <div class="modal-content text-black">
+                                        <h2>Online Training</h2>
+                                        <form action="/submit_online" method="post">
+                                            <div class="form-group">
+                                                <label for="name">Name:</label>
+                                                <input type="text" id="name" name="name" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" id="email" name="email" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="phone">Phone Number:</label>
+                                                <input type="tel" id="phone" name="phone" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="schedule">Preferred Schedule:</label>
+                                                <input type="text" id="schedule" name="schedule"
+                                                    placeholder="e.g., Mon to Sat, 5 am to 9 pm" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="training_type">Training Type:</label>
+                                                <select id="training_type" name="training_type" required>
+                                                    <option value="weight_training">Weight Training</option>
+                                                    <option value="stretching">Stretching</option>
+                                                    <option value="counseling">Counseling</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="trial">Free Trial:</label>
+                                                <input type="checkbox" id="trial" name="trial">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pricing">Pricing:</label>
+                                                <select id="pricing" name="pricing" required>
+                                                    <option value="1_month">1 Month - ₹6,000</option>
+                                                    <option value="3_months">3 Months - ₹16,000</option>
+                                                    <option value="6_months">6 Months - ₹30,000</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="payment">Payment Option:</label>
+                                                <input type="text" id="payment" name="payment" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="platform">Preferred Platform:</label>
+                                                <select id="platform" name="platform" required>
+                                                    <option value="zoom">Zoom</option>
+                                                    <option value="google_meet">Google Meet</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit">Submit</button>
+                                        </form>
+                                        <button class="close-modal" id="closeOnlineModalButton">&times;</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="d-flex df-right mobile-block">
-                                <button class="btn btn-action m-1"> Offline training</button>
+                            <div class="d-flex df-right mobile-block text-black">
+                                <button class="btn btn-action m-1" id="openOfflineModalButton">Offline training</button>
+                                <div id="offlineTrainingModal" class="modal">
+                                    <div class="modal-content">
+                                        <h2>Offline Training</h2>
+                                        <form action="/submit_offline" method="post">
+                                            <div class="form-group">
+                                                <label for="name">Name:</label>
+                                                <input type="text" id="name" name="name" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" id="email" name="email" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="phone">Phone Number:</label>
+                                                <input type="tel" id="phone" name="phone" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="schedule">Preferred Schedule:</label>
+                                                <input type="text" id="schedule" name="schedule"
+                                                    placeholder="e.g., Mon to Sat, 5 am to 9 pm" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="training_type">Training Type:</label>
+                                                <select id="training_type" name="training_type" required>
+                                                    <option value="weight_training">Weight Training</option>
+                                                    <option value="stretching">Stretching</option>
+                                                    <option value="counseling">Counseling</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="trial">Free Trial:</label>
+                                                <input type="checkbox" id="trial" name="trial">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="pricing">Pricing:</label>
+                                                <select id="pricing" name="pricing" required>
+                                                    <option value="1_month">1 Month - ₹6,000</option>
+                                                    <option value="3_months">3 Months - ₹16,000</option>
+                                                    <option value="6_months">6 Months - ₹30,000</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="payment">Payment Option:</label>
+                                                <input type="text" id="payment" name="payment" required>
+                                            </div>
+
+                                            <button type="submit">Submit</button>
+                                        </form>
+                                        <button class="close-modal" id="closeOfflineModalButton">&times;</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="d-grid dg-2-1 mt-2">
@@ -235,7 +353,7 @@
                                     </div>
                                     <div>
                                         <i class="ri-calendar-schedule-line"></i>
-                                        5am to 9pm
+                                        5:00 AM to 9:00 PM
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +419,53 @@
                             </div>
                             <div class="plan-left">
                                 <div class="d-flex df-center">
-                                    <button class="btn btn-action">JOIN MEMBER</button>
+                                    <button class="btn btn-action m-1" id="openJoinModalButton">JOIN MEMBER</button>
+                                    <div id="joinMemberModal" class="modal">
+                                        <div class="modal-content">
+                                            <h2>JOIN MEMBER</h2>
+                                            <form action="/submit_membership" method="post">
+                                                <div class="form-group">
+                                                    <label for="name">Name:</label>
+                                                    <input type="text" id="name" name="name" required>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" id="email" name="email" required>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="phone">Phone Number:</label>
+                                                    <input type="tel" id="phone" name="phone" required>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="membership_duration">Membership Duration:</label>
+                                                    <select id="membership_duration" name="membership_duration"
+                                                        required>
+                                                        <option value="1_month">1 Month - ₹6,000</option>
+                                                        <option value="3_month">3 Month - ₹16,000</option>
+                                                        <option value="6_months">6 Months - ₹30,000</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="training_included">Training Included:</label>
+                                                    <input type="text" id="training_included" name="training_included"
+                                                        placeholder="e.g., Warm-up, Cardio, Diet/Nutrition Advice, Floor Exercise"
+                                                        required>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="payment">Payment Option:</label>
+                                                    <input type="text" id="payment" name="payment" required>
+                                                </div>
+
+                                                <button type="submit">Submit</button>
+                                            </form>
+                                            <button class="close-modal" id="closeJoinModalButton">&times;</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -642,11 +806,11 @@
                 </div>
             </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function showMenu() {
             $("#header-nav").removeClass("mobile-hide");
@@ -704,6 +868,40 @@
         flipCard.addEventListener('click', () => {
             flipCard.classList.toggle('flipped');
         });
+    </script>
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+        document.getElementById('openOnlineModalButton').onclick = function () {
+            openModal('onlineTrainingModal');
+        };
+        document.getElementById('openOfflineModalButton').onclick = function () {
+            openModal('offlineTrainingModal');
+        };
+        document.getElementById('openJoinModalButton').onclick = function () {
+            openModal('joinMemberModal');
+        };
+        document.getElementById('closeOnlineModalButton').onclick = function () {
+            closeModal('onlineTrainingModal');
+        };
+        document.getElementById('closeOfflineModalButton').onclick = function () {
+            closeModal('offlineTrainingModal');
+        };
+        document.getElementById('closeJoinModalButton').onclick = function () {
+            closeModal('joinMemberModal');
+        };
+        window.onclick = function (event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    closeModal(modal.id);
+                }
+            });
+        };
     </script>
 </body>
 
