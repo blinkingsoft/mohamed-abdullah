@@ -571,11 +571,13 @@ button:hover {
 
 
 @media only screen and (max-width: 900px) {
+    #program-section {
+        display: none;
+    }
 
     #header-nav {
         margin: 0rem;
         padding: 0rem;
-        padding-top: 1rem;
     }
 
     #header-nav a {
@@ -593,8 +595,7 @@ button:hover {
 
     nav {
         height: 0px;
-        padding-top: 0.5rem;
-        padding-bottom: 1rem;
+        padding: 0.5rem;
     }
 
     .rotate-20 {
@@ -667,7 +668,14 @@ button:hover {
     }
 
     .progress-img {
-        display: none;
+        max-width: 140px;
+        margin: 10rem 1.5rem 0 0;
+    }
+
+    .highlight-video {
+        margin-top: 7rem;
+        max-width: 300px;
+        max-height: 200px;
     }
 
     .container {
