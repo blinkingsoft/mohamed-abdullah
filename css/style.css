@@ -565,6 +565,9 @@ button:hover {
     cursor: pointer;
 }
 
+.program-img {
+    max-width: 50%;
+}
 
 
 @media only screen and (max-width: 900px) {
