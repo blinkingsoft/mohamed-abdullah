@@ -938,10 +938,6 @@ button:hover {
         max-width: 60%;
     }
 
-    [data-theme='dark'] .dropdown {
-        background-color: grey;
-    }
-
     .tm-highlight {
         padding-right: 0;
         padding-top: 0;
@@ -984,5 +980,9 @@ button:hover {
         margin-left: 0;
         padding-left: 0;
         margin-top: 5rem;
+    }
+
+    .dg-1-1-1-1-1 {
+        grid-template-columns: 1fr;
     }
 }
