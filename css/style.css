@@ -833,6 +833,12 @@ button:hover {
         margin-top: 2rem;
     }
 
+    .progress-img {
+        max-width: 80%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
     button,
     .btn {
         display: block !important;
@@ -862,6 +868,10 @@ button:hover {
 
     .footer-heading {
         margin-left: 0rem;
+    }
+
+    .footer-icons {
+        gap: 1rem;
     }
 
     button {

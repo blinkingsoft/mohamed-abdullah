@@ -29,11 +29,11 @@ a {
     padding: 50px 100px;
 }
 
-.relative{
+.relative {
     position: relative;
 }
 
-.absolute{
+.absolute {
     position: absolute;
 }
 
@@ -53,6 +53,7 @@ a {
 .gap-2 {
     gap: 2rem;
 }
+
 .gap-6 {
     gap: 6rem;
 }
@@ -100,6 +101,7 @@ a {
 .dg-1-2 {
     grid-template-columns: 1fr 2fr;
 }
+
 .dg-1-4 {
     grid-template-columns: 1fr 6fr;
 }
@@ -341,6 +343,10 @@ a {
 
 .mb-10 {
     margin-bottom: 10rem;
+}
+
+.mx-auto {
+    margin: auto;
 }
 
 .p-1 {
